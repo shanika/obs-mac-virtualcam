@@ -4,3 +4,6 @@ xcode/
 *.generated.*
 /installer/Output/
 Brewfile.lock.json
+
+.idea
+cmake-build-debug
