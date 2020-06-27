@@ -71,11 +71,11 @@ target_link_libraries(dal-plugin
 
 # Workaround because building from Xcode likes to put things in Debug and Release directories
 # TODO: This only supports Debug
-if (XCODE)
+if(XCODE)
 	set(TARGET_DIR "${CMAKE_CURRENT_BINARY_DIR}/Debug")
-else (XCODE)
+else()
 	set(TARGET_DIR "${CMAKE_CURRENT_BINARY_DIR}")
-endif (XCODE)
+endif()
 
 add_custom_command(TARGET dal-plugin
 	POST_BUILD
