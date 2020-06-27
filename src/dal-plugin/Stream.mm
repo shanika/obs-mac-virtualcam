@@ -136,8 +136,7 @@
         if (fps == 0) {
             _fps = DEFAULT_FPS;
         } else {
-//            _fps = fps;
-            _fps = DEFAULT_FPS;
+            _fps = fps;
         }
     }
     return _fps;
