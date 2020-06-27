@@ -172,7 +172,7 @@ void DrawTestCardWithFrame(CGContextRef context, NSRect frame)
             labelStyle.alignment = NSTextAlignmentLeft;
             NSDictionary* labelFontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"Helvetica-Bold" size: 32], NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: labelStyle};
 
-            [@"OBS Virtual Cam " drawInRect: NSOffsetRect(labelRect, 0, 0) withAttributes: labelFontAttributes];
+            [@"NameTag Virtual Cam " drawInRect: NSOffsetRect(labelRect, 0, 0) withAttributes: labelFontAttributes];
 
 
             //// Label 2 Drawing
@@ -233,7 +233,7 @@ void DrawTestCardWithFrame(CGContextRef context, NSRect frame)
             label7Style.alignment = NSTextAlignmentLeft;
             NSDictionary* label7FontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"Helvetica-Bold" size: 32], NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: label7Style};
 
-            [@"OBS Virtual Cam " drawInRect: NSOffsetRect(label7Rect, 0, 0) withAttributes: label7FontAttributes];
+            [@"NameTag Virtual Cam " drawInRect: NSOffsetRect(label7Rect, 0, 0) withAttributes: label7FontAttributes];
 
 
             //// Label 8 Drawing

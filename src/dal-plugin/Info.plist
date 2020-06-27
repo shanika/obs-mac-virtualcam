@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>obs-mac-virtualcam</string>
+	<string>NameTag</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.johnboiles.obs-mac-virtualcam.dal-plugin</string>
+	<string>co.nz.mobileinnovations.vc</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>OBS Virtual Camera</string>
+	<string>NameTag Virtual Camera</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -38,7 +38,7 @@
 	<string>10.13</string>
 	<key>CMIOHardwareAssistantServiceNames</key>
 	<array>
-		<string>com.johnboiles.obs-mac-virtualcam.server</string>
+		<string>co.nz.mobileinnovations.server</string>
 	</array>
 </dict>
 </plist>

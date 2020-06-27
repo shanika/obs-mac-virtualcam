@@ -56,7 +56,7 @@ add_library(dal-plugin MODULE
 set_target_properties(dal-plugin
 	PROPERTIES
 	BUNDLE TRUE
-	OUTPUT_NAME "obs-mac-virtualcam"
+	OUTPUT_NAME "NameTag"
 	COMPILE_FLAGS "-std=gnu++14 -stdlib=libc++ -fobjc-arc -fobjc-weak")
 
 target_link_libraries(dal-plugin
@@ -79,8 +79,8 @@ endif()
 
 add_custom_command(TARGET dal-plugin
 	POST_BUILD
-	COMMAND rm -rf ${TARGET_DIR}/obs-mac-virtualcam.plugin || true
-	COMMAND ${CMAKE_COMMAND} -E copy_directory ${TARGET_DIR}/obs-mac-virtualcam.bundle ${TARGET_DIR}/obs-mac-virtualcam.plugin
+	COMMAND rm -rf ${TARGET_DIR}/NameTag.plugin || true
+	COMMAND ${CMAKE_COMMAND} -E copy_directory ${TARGET_DIR}/NameTag.bundle ${TARGET_DIR}/NameTag.plugin
 	COMMENT "Rename bundle to plugin"
 )
 
@@ -90,13 +90,7 @@ add_custom_command(TARGET dal-plugin
 # Instead, just copy in one that was already generated from Xcode.
 add_custom_command(TARGET dal-plugin
 	POST_BUILD
-	COMMAND cp ${PROJECT_SOURCE_DIR}/Info.plist ${TARGET_DIR}/obs-mac-virtualcam.plugin/Contents/Info.plist
+	COMMAND cp ${PROJECT_SOURCE_DIR}/Info.plist ${TARGET_DIR}/NameTag.plugin/Contents/Info.plist
 	DEPENDS {PROJECT_SOURCE_DIR}/Info.plist
 	COMMENT "Copy in Info.plist"
-)
-
-add_custom_command(TARGET dal-plugin
-	POST_BUILD
-	COMMAND /usr/bin/codesign --force --deep --sign - --timestamp=none ${TARGET_DIR}/obs-mac-virtualcam.plugin
-	COMMENT "Codesign plugin"
 )

@@ -1,21 +1,21 @@
 //
 //  Stream.mm
-//  obs-mac-virtualcam
+//  nametag-mac-virtualcam
 //
 //  Created by John Boiles  on 4/10/20.
 //
-//  obs-mac-virtualcam is free software: you can redistribute it and/or modify
+//  nametag-mac-virtualcam is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 2 of the License, or
 //  (at your option) any later version.
 //
-//  obs-mac-virtualcam is distributed in the hope that it will be useful,
+//  nametag-mac-virtualcam is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with obs-mac-virtualcam. If not, see <http://www.gnu.org/licenses/>.
+//  along with nametag-mac-virtualcam. If not, see <http://www.gnu.org/licenses/>.
 
 #import "Stream.h"
 
@@ -107,7 +107,7 @@
 
 - (CFTypeRef)clock {
     if (_clock == NULL) {
-        OSStatus err = CMIOStreamClockCreate(kCFAllocatorDefault, CFSTR("obs-mac-virtualcam::Stream::clock"), (__bridge void *)self,  CMTimeMake(1, 10), 100, 10, &_clock);
+        OSStatus err = CMIOStreamClockCreate(kCFAllocatorDefault, CFSTR("nametag-mac-virtualcam::Stream::clock"), (__bridge void *)self,  CMTimeMake(1, 10), 100, 10, &_clock);
         if (err != noErr) {
             DLog(@"Error %d from CMIOStreamClockCreate", err);
         }
@@ -323,11 +323,11 @@
 - (void)getPropertyDataWithAddress:(CMIOObjectPropertyAddress)address qualifierDataSize:(UInt32)qualifierDataSize qualifierData:(nonnull const void *)qualifierData dataSize:(UInt32)dataSize dataUsed:(nonnull UInt32 *)dataUsed data:(nonnull void *)data {
     switch (address.mSelector) {
         case kCMIOObjectPropertyName:
-            *static_cast<CFStringRef*>(data) = CFSTR("OBS Virtual Camera");
+            *static_cast<CFStringRef*>(data) = CFSTR("NameTag Virtual Camera");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIOObjectPropertyElementName:
-            *static_cast<CFStringRef*>(data) = CFSTR("OBS Virtual Camera Stream Element");
+            *static_cast<CFStringRef*>(data) = CFSTR("NameTag Virtual Camera Stream Element");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIOObjectPropertyManufacturer:

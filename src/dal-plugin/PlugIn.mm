@@ -1,21 +1,21 @@
 //
 //  PlugIn.mm
-//  obs-mac-virtualcam
+//  nametag-mac-virtualcam
 //
 //  Created by John Boiles  on 4/9/20.
 //
-//  obs-mac-virtualcam is free software: you can redistribute it and/or modify
+//  nametag-mac-virtualcam is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 2 of the License, or
 //  (at your option) any later version.
 //
-//  obs-mac-virtualcam is distributed in the hope that it will be useful,
+//  nametag-mac-virtualcam is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with obs-mac-virtualcam. If not, see <http://www.gnu.org/licenses/>.
+//  along with nametag-mac-virtualcam. If not, see <http://www.gnu.org/licenses/>.
 
 #import "PlugIn.h"
 
@@ -60,7 +60,7 @@ typedef enum {
 
 - (instancetype)init {
     if (self = [super init]) {
-        _stateQueue = dispatch_queue_create("com.johnboiles.obs-mac-virtualcam.dal.state", DISPATCH_QUEUE_SERIAL);
+        _stateQueue = dispatch_queue_create("com.johnboiles.nametag-mac-virtualcam.dal.state", DISPATCH_QUEUE_SERIAL);
 
         _timeoutTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, _stateQueue);
         __weak typeof(self) weakSelf = self;
@@ -157,7 +157,7 @@ typedef enum {
 - (void)getPropertyDataWithAddress:(CMIOObjectPropertyAddress)address qualifierDataSize:(UInt32)qualifierDataSize qualifierData:(nonnull const void *)qualifierData dataSize:(UInt32)dataSize dataUsed:(nonnull UInt32 *)dataUsed data:(nonnull void *)data {
     switch (address.mSelector) {
         case kCMIOObjectPropertyName:
-            *static_cast<CFStringRef*>(data) = CFSTR("OBS Virtual Camera Plugin");
+            *static_cast<CFStringRef*>(data) = CFSTR("NameTag Virtual Camera Plugin");
             *dataUsed = sizeof(CFStringRef);
             return;
         default:
