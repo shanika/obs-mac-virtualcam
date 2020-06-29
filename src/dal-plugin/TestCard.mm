@@ -172,7 +172,7 @@ void DrawTestCardWithFrame(CGContextRef context, NSRect frame)
             labelStyle.alignment = NSTextAlignmentLeft;
             NSDictionary* labelFontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"Helvetica-Bold" size: 32], NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: labelStyle};
 
-            [@"NameTag Virtual Cam " drawInRect: NSOffsetRect(labelRect, 0, 0) withAttributes: labelFontAttributes];
+            [@"Work Cam " drawInRect: NSOffsetRect(labelRect, 0, 0) withAttributes: labelFontAttributes];
 
 
             //// Label 2 Drawing
@@ -190,7 +190,7 @@ void DrawTestCardWithFrame(CGContextRef context, NSRect frame)
             label3Style.alignment = NSTextAlignmentLeft;
             NSDictionary* label3FontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"Helvetica-Bold" size: 32], NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: label3Style};
 
-            [@"Choose Tools > " drawInRect: NSOffsetRect(label3Rect, 0, 0) withAttributes: label3FontAttributes];
+            [@"Start " drawInRect: NSOffsetRect(label3Rect, 0, 0) withAttributes: label3FontAttributes];
 
 
             //// Label 4 Drawing
@@ -199,7 +199,7 @@ void DrawTestCardWithFrame(CGContextRef context, NSRect frame)
             label4Style.alignment = NSTextAlignmentLeft;
             NSDictionary* label4FontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"Helvetica-Bold" size: 32], NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: label4Style};
 
-            [@"Start Virtual " drawInRect: NSOffsetRect(label4Rect, 0, 0) withAttributes: label4FontAttributes];
+            [@"Work Cam" drawInRect: NSOffsetRect(label4Rect, 0, 0) withAttributes: label4FontAttributes];
 
 
             //// Label 5 Drawing
@@ -208,7 +208,7 @@ void DrawTestCardWithFrame(CGContextRef context, NSRect frame)
             label5Style.alignment = NSTextAlignmentLeft;
             NSDictionary* label5FontAttributes = @{NSFontAttributeName: [NSFont fontWithName: @"Helvetica-Bold" size: 32], NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: label5Style};
 
-            [@"Camera." drawInRect: NSOffsetRect(label5Rect, 0, 0) withAttributes: label5FontAttributes];
+            [@"App" drawInRect: NSOffsetRect(label5Rect, 0, 0) withAttributes: label5FontAttributes];
 
 
             //// Label 6 Drawing
