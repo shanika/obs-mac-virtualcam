@@ -1,10 +1,3 @@
-//
-//  MachClient.h
-//  dal-plugin
-//
-//  Created by John Boiles  on 5/5/20.
-//
-
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN

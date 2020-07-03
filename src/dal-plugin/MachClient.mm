@@ -1,9 +1,3 @@
-//
-//  MachClient.m
-//  dal-plugin
-//
-//  Created by John Boiles  on 5/5/20.
-//
 
 #import "MachClient.h"
 #import "MachProtocol.h"

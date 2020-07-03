@@ -1,9 +1,3 @@
-//
-//  CMSampleBufferUtils.m
-//  dal-plugin
-//
-//  Created by John Boiles  on 5/8/20.
-//
 
 #import "CMSampleBufferUtils.h"
 
