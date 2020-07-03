@@ -186,8 +186,6 @@
     CGImageRef image = [self.testCardImage CGImageForProposedRect:&rect context:nsContext hints:nil];
     CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(image), CGImageGetHeight(image)), image);
 
-    DrawDialWithFrame(NSMakeRect(0, 0, width, height), (int(self.fps) - self.sequenceNumber % int(self.fps)) * 360 / int(self.fps));
-
     CGContextRelease(context);
 
     CVPixelBufferUnlockBaseAddress(pxbuffer, 0);
