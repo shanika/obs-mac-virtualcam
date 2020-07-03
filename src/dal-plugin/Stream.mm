@@ -89,7 +89,7 @@
 
 - (CFTypeRef)clock {
     if (_clock == NULL) {
-        OSStatus err = CMIOStreamClockCreate(kCFAllocatorDefault, CFSTR("nametag-mac-virtualcam::Stream::clock"), (__bridge void *)self,  CMTimeMake(1, 10), 100, 10, &_clock);
+        OSStatus err = CMIOStreamClockCreate(kCFAllocatorDefault, CFSTR("workcamera-mac-virtualcam::Stream::clock"), (__bridge void *)self,  CMTimeMake(1, 10), 100, 10, &_clock);
         if (err != noErr) {
             DLog(@"Error %d from CMIOStreamClockCreate", err);
         }
@@ -303,11 +303,11 @@
 - (void)getPropertyDataWithAddress:(CMIOObjectPropertyAddress)address qualifierDataSize:(UInt32)qualifierDataSize qualifierData:(nonnull const void *)qualifierData dataSize:(UInt32)dataSize dataUsed:(nonnull UInt32 *)dataUsed data:(nonnull void *)data {
     switch (address.mSelector) {
         case kCMIOObjectPropertyName:
-            *static_cast<CFStringRef*>(data) = CFSTR("NameTag Virtual Camera");
+            *static_cast<CFStringRef*>(data) = CFSTR("Work Camera Virtual Camera");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIOObjectPropertyElementName:
-            *static_cast<CFStringRef*>(data) = CFSTR("NameTag Virtual Camera Stream Element");
+            *static_cast<CFStringRef*>(data) = CFSTR("Work Camera Virtual Camera Stream Element");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIOObjectPropertyManufacturer:

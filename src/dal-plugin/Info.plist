@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>NameTag</string>
+	<string>WorkCamera</string>
 	<key>CFBundleIdentifier</key>
 	<string>co.nz.mobileinnovations.vc</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>NameTag Virtual Camera</string>
+	<string>Work Camera Virtual Camera</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>

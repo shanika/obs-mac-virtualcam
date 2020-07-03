@@ -43,7 +43,7 @@ typedef enum {
 
 - (instancetype)init {
     if (self = [super init]) {
-        _stateQueue = dispatch_queue_create("com.johnboiles.nametag-mac-virtualcam.dal.state", DISPATCH_QUEUE_SERIAL);
+        _stateQueue = dispatch_queue_create("nz.co.mobileinnovations.workcamera-mac-virtualcam.dal.state", DISPATCH_QUEUE_SERIAL);
 
         _timeoutTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, _stateQueue);
         __weak typeof(self) weakSelf = self;
@@ -140,7 +140,7 @@ typedef enum {
 - (void)getPropertyDataWithAddress:(CMIOObjectPropertyAddress)address qualifierDataSize:(UInt32)qualifierDataSize qualifierData:(nonnull const void *)qualifierData dataSize:(UInt32)dataSize dataUsed:(nonnull UInt32 *)dataUsed data:(nonnull void *)data {
     switch (address.mSelector) {
         case kCMIOObjectPropertyName:
-            *static_cast<CFStringRef*>(data) = CFSTR("NameTag Virtual Camera Plugin");
+            *static_cast<CFStringRef*>(data) = CFSTR("WorkCamera Virtual Camera Plugin");
             *dataUsed = sizeof(CFStringRef);
             return;
         default:

@@ -76,7 +76,7 @@
 
     switch (address.mSelector) {
         case kCMIOObjectPropertyName:
-            *static_cast<CFStringRef*>(data) = CFSTR("NameTag");
+            *static_cast<CFStringRef*>(data) = CFSTR("Work Camera");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIOObjectPropertyManufacturer:
@@ -96,11 +96,11 @@
             *dataUsed = sizeof(CMIOObjectID);
             break;
         case kCMIODevicePropertyDeviceUID:
-            *static_cast<CFStringRef*>(data) = CFSTR("nametag-virtual-cam-device");
+            *static_cast<CFStringRef*>(data) = CFSTR("workcamera-virtual-cam-device");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIODevicePropertyModelUID:
-            *static_cast<CFStringRef*>(data) = CFSTR("nametag-virtual-cam-model");
+            *static_cast<CFStringRef*>(data) = CFSTR("workcamera-virtual-cam-model");
             *dataUsed = sizeof(CFStringRef);
             break;
         case kCMIODevicePropertyTransportType:
